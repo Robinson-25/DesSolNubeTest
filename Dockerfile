@@ -1,19 +1,13 @@
 # Imagen de php
 FROM php:8.1-apache
 
-# Instalar las dependencias necesarias para trabajar con postgreSQL
+# Instalar las dependencias necesarias para trabajar con PostgreSQL
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Copiamos todo el contenido de mi proyecto a el contenedor de PHP
+# Copiamos todo el contenido de mi proyecto al contenedor de PHP
 COPY . /var/www/html/
 
 # Exponemos el puerto 80
 EXPOSE 80
-
-
-
-enlace
-
-https://chat.qwen.ai/
